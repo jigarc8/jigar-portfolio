@@ -4,11 +4,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const tools = [
-    { name: "Jira", category: "Project Management" },
-    { name: "Zoho Projects", category: "Operations" },
+    { name: "Jira", category: "Bug Tracking" },
+    { name: "Zoho Projects", category: "Project & Task Management" },
     { name: "Trello", category: "Task Tracking" },
-    { name: "GanttPro", category: "Planning" },
-    { name: "Notion", category: "Documentation" },
+    { name: "GanttPro", category: "Project Planning and Gantt Charts" },
+    { name: "Notion", category: "Documentation & Notes" },
 ];
 
 export default function ToolkitCarousel() {

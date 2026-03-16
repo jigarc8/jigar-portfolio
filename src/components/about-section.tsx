@@ -6,38 +6,29 @@ import SectionHeading from "./section-heading";
 
 const skills = [
   {
-    title: "Project Management",
+    title: "Project Leadership",
     items: [
-      "Client Servicing",
-      "Project Planning",
-      "Gantt Charts",
-      "Negotiation",
-      "Resource & Team Management",
-      "Time Management",
-      "Critical Thinking",
+      "Client servicing",
+      "Project planning",
+      "Resource management",
+      "Team coordination",
     ],
   },
   {
-    title: "PM Tools",
-    items: ["Zoho Projects", "Jira", "MS Office"],
+    title: "Product & Delivery Tools",
+    items: ["Jira", "Zoho Projects", "Trello", "GanttPro"],
   },
   {
-    title: "Technical Skills",
-    items: ["HTML", "CSS", "JavaScript", "SQL", "React"],
+    title: "Digital Product Stack",
+    items: ["WordPress", "Shopify", "Framer"],
   },
   {
-    title: "CMS Platforms",
-    items: ["WordPress", "Shopify", "Wix", "Framer"],
+    title: "Design & Growth",
+    items: ["Figma", "Adobe XD", "SEO"],
   },
   {
-    title: "Design & SEO",
-    items: [
-      "Figma",
-      "Adobe XD",
-      "Illustrator",
-      "Photoshop",
-      "On-Page & Technical SEO",
-    ],
+    title: "AI Tools",
+    items: ["Antigravity", "Google Flow"],
   },
 ];
 

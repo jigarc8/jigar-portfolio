@@ -16,7 +16,7 @@ const lifecycleSteps = [
     },
     {
         title: "Execution & Coordination",
-        description: "Leading cross-functional teams through Agile sprints. Orchestrating seamless collaboration between Design, Tech, and Business units.",
+        description: "Managing cross-functional collaboration between design, development and business stakeholders. cross-functional teams through Agile sprints. Orchestrating seamless collaboration between Design, Tech, and Business units.",
         icon: "calendar",
     },
     {

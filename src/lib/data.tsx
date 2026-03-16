@@ -46,21 +46,21 @@ export const projectsData: Project[] = [
     title: "Jayostute Capital",
     bgColor: "bg-white",
     className: "w-[90%] h-auto object-cover object-center",
-    subTitle: "Loan Lending Platform",
+    subTitle: "Banking & Finance",
     result: [
       { percent: "100%", text: "On-Time Delivery" },
-      { percent: "1 Month", text: "End-to-End Delivery" },
+      { percent: "1 Month", text: "End-to-End Launch" },
     ],
     description:
-      "Managed and delivered a full-scale loan lending website with end-to-end Loan Journey flows for every loan use case.",
+      "Delivered a full-scale lending platform enabling customers to explore loan products and initiate digital applications across multiple financial services.",
     links: {
       preview: "https://www.jayostute.com/",
       github: "#",
       githubApi: "#",
     },
-    tools: ["Banking and Finance"],
+    tools: ["Banking & Finance"],
     process:
-      "Owned end-to-end delivery of the Jayostute Capital lending platform — scoped Loan Journey flows for each loan product, coordinated design and development sprints, and shipped the complete website within a month.",
+      "Managed product scope and coordinated design-development sprints to deliver a structured loan journey for multiple financial products including personal, business, and property loans.",
     category: "Digital (UI/UX & Tech)",
   },
   {
@@ -81,7 +81,7 @@ export const projectsData: Project[] = [
       githubApi: "#",
     },
     tools: ["Corporate/Government/Real Estate"],
-    process: "Orchestrated end-to-end SDLC for state-led platforms, ensuring compliance and seamless stakeholder integration.",
+    process: "Orchestrated end-to-end SDLC for a government-led industrial platform, aligning branding, website design, and digital systems to communicate large-scale infrastructure initiatives.",
     category: "Digital (UI/UX & Tech)",
   },
   {

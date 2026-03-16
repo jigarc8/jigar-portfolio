@@ -25,20 +25,20 @@ export const projectsData: Project[] = [
     title: "Stuvio",
     bgColor: "bg-white",
     className: "bg-white w-[90%] h-auto object-cover object-center",
-    subTitle: "Operations & SEO Growth",
+    subTitle: "Digital Agency",
     result: [
-      { percent: "80%", text: "Organic Growth" },
-      { percent: "40%", text: "Team Efficiency" },
+      { percent: "50%", text: "Increase in Business Leads" },
+      { percent: "70%", text: "Increase in Job Applications" },
     ],
     description:
-      "Transforming team operations and digital presence for sustained growth",
+      "Optimized digital operations and delivery workflows for a design-led agency, improving project execution, visibility, and inbound business opportunities.",
     links: {
       preview: "https://www.stuvio.co",
       github: "#",
       githubApi: "#",
     },
     tools: ["Digital Agency"],
-    process: "Led Agile transformation, optimized resource allocation, and managed stakeholder expectations across 10+ workstreams.",
+    process: "Led agile transformation across teams, streamlined project workflows, coordinated 10+ concurrent workstreams, and improved the agency’s digital presence to drive inbound leads and hiring traction.",
     category: "Digital (UI/UX & Tech)",
   },
   {

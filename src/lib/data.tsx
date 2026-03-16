@@ -212,7 +212,6 @@ export const projectsData: Project[] = [
     },
     tools: ["Figma", "Illustrator", "Slack", "Google Workspace"],
     process: "Managed the end-to-end creative process from moodboarding and typeface selection to final brand guidelines and implementation.",
-    category: "Branding",
   },
   {
     img: "assets/images/electronics.avif",

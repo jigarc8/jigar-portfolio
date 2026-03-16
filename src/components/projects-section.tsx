@@ -216,3 +216,22 @@ function OptimizedVideo({ videoSrc }: { videoSrc: string }) {
     />
   );
 }
+
+function VimeoEmbed({ videoUrl }: { videoUrl: string }) {
+  // Extract ID from various Vimeo formats
+  const videoId = videoUrl.split('/').pop()?.split('?')[0];
+
+  if (!videoId) return null;
+
+  return (
+    <div className="w-full h-full relative pointer-events-none">
+      <iframe
+        src={`https://player.vimeo.com/video/${videoId}?autoplay=1&loop=1&muted=1&background=1`}
+        className="absolute top-0 left-0 w-full h-full"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+}

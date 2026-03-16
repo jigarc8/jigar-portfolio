@@ -226,14 +226,77 @@ export const projectsData: Project[] = [
       { percent: "10+", text: "AV & Visual Assets Produced" },
     ],
     description:
-      "Delivered a group-level corporate AV showcasing the innovation and capabilities of RRP Electronics, RRP Drones, and RRP Vimananu, highlighting the organization’s contributions across aerospace and electronics technologies.",
+      "Produced a corporate AV for the RRP Group, highlighting the innovation and capabilities of RRP Electronics, RRP Drones, and RRP Vimananu.",
     links: {
       preview: "#",
       github: "#",
       githubApi: "#",
     },
     tools: ["Aerospace / Electronics Technology"],
-    process: "Managed end-to-end AV production across multiple business units—coordinating scripting, storyboarding, filming, editing, and stakeholder approvals to create a unified brand narrative for the entire RRP Group.",
+    process: "Managed end-to-end AV production across multiple business units—coordinating scripting, storyboarding, editing, and stakeholder approvals to create a unified brand narrative for the entire RRP Group.",
+    category: "AV / Films & Brand Content",
+  },
+  {
+    img: "assets/images/electronics.avif",
+    title: "RRP Electronics – Process AV",
+    bgColor: "bg-white",
+    className: "w-full h-full object-cover",
+    subTitle: "Electronics Manufacturing",
+    result: [
+      { percent: "1", text: "Manufacturing Process Film" },
+      { percent: "5+", text: "Production Stages Showcased" },
+    ],
+    description:
+      "Produced a process AV showcasing the advanced manufacturing workflows and capabilities of RRP Electronics’ precision electronics production.",
+    links: {
+      preview: "#",
+      github: "#",
+      githubApi: "#",
+    },
+    tools: ["Electronics Manufacturing"],
+    process: "Managed scripting, filming coordination, and post-production to translate complex electronics manufacturing processes into clear visual storytelling.",
+    category: "AV / Films & Brand Content",
+  },
+  {
+    img: "assets/images/defense.avif",
+    title: "LIDCOM – Branding & Corporate Film",
+    bgColor: "bg-white",
+    className: "h-full w-auto",
+    subTitle: "Government / Social Enterprise",
+    result: [
+      { percent: "1", text: "Corporate Brand Film" },
+      { percent: "1", text: "Brand Identity System" },
+    ],
+    description:
+      "Delivered branding and a corporate film to strengthen LIDCOM’s public communication and highlight its development initiatives.",
+    links: {
+      preview: "#",
+      github: "#",
+      githubApi: "#",
+    },
+    tools: ["Government / Social Enterprise"],
+    process: "Coordinated branding strategy, creative design, and film production to create a cohesive brand narrative across visual and video assets.",
+    category: "AV / Films & Brand Content",
+  },
+  {
+    img: "assets/images/stuvio.png",
+    title: "Alviolife – Laila Nutra Product Film",
+    bgColor: "bg-white",
+    className: "w-[80%] h-auto",
+    subTitle: "Health & Wellness",
+    result: [
+      { percent: "1", text: "Product Film Delivered" },
+      { percent: "Multiple", text: "Marketing Assets Created" },
+    ],
+    description:
+      "Produced a product showcase video for Laila Nutra by Alviolife, highlighting key benefits and positioning the brand in the wellness market.",
+    links: {
+      preview: "#",
+      github: "#",
+      githubApi: "#",
+    },
+    tools: ["Health & Wellness"],
+    process: "Led concept development, production coordination, and post-production to deliver a product-focused film optimized for digital marketing.",
     category: "AV / Films & Brand Content",
   },
 ] as const;

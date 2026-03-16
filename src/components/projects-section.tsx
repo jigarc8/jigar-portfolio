@@ -18,6 +18,13 @@ export default function ProjectsSection() {
   const { ref } = useSectionInView("Case Studies");
   const [activeCategory, setActiveCategory] = useState<typeof categories[number]>("All");
 
+  const visibleCategories = useMemo(() => {
+    return categories.filter((category) => {
+      if (category === "All") return true;
+      return projectsData.some((project) => project.category === category);
+    });
+  }, []);
+
   const filteredProjects = useMemo(() => {
     if (activeCategory === "All") return projectsData;
     return projectsData.filter((project) => project.category === activeCategory);
@@ -48,7 +55,7 @@ export default function ProjectsSection() {
 
       {/* Filter Bar */}
       <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 p-2 bg-secondary/10 rounded-2xl border border-secondary/20 max-w-fit mx-auto">
-        {categories.map((category) => (
+        {visibleCategories.map((category) => (
           <button
             key={category}
             onClick={() => setActiveCategory(category)}

@@ -197,7 +197,7 @@ export const projectsData: Project[] = [
     process: "Leading the final stretch of development for a massive summit portal, focusing on performance stress-testing and last-mile quality assurance.",
     category: "Digital (UI/UX & Tech)",
   },
-  {
+  /* {
     img: "assets/images/stuvio.png",
     title: "Brand Identity: Stuvio",
     bgColor: "bg-white",
@@ -212,7 +212,7 @@ export const projectsData: Project[] = [
     },
     tools: ["Figma", "Illustrator", "Slack", "Google Workspace"],
     process: "Managed the end-to-end creative process from moodboarding and typeface selection to final brand guidelines and implementation.",
-  },
+  }, */
   {
     img: "assets/images/electronics.avif",
     video: "assets/videos/Revised Vimananu_Av.mp4",

@@ -113,9 +113,8 @@ export default function AboutSection() {
           <div
             className="
               mt-8 grid w-full max-w-7xl
-              grid-cols-1 md:grid-cols-6
-              md:grid-rows-2
-              gap-3 md:gap-4
+              grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+              gap-4 md:gap-6
               md:justify-stretch
             "
           >
@@ -127,7 +126,7 @@ export default function AboutSection() {
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`
+                className="
                   group relative flex flex-col justify-between rounded-2xl border 
                   bg-gradient-to-br p-6
                   backdrop-blur-sm
@@ -137,20 +136,10 @@ export default function AboutSection() {
                   hover:border-primary/30 
                   hover:bg-foreground/[0.04]
                   transition-all duration-300
-                  ${index === 0
-                    ? "md:col-span-3 md:row-span-1"
-                    : "md:col-span-3 lg:col-span-2"
-                  }
-                `}
+                "
               >
                 {/* Glow Effect */}
                 <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-sm -z-10" />
-
-                <div className="flex items-start justify-between mb-4">
-                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <SkillIcon name={category.icon} />
-                  </div>
-                </div>
 
                 <div>
                   <h3 className="text-lg font-bold text-foreground mb-1">

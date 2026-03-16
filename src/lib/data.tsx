@@ -238,7 +238,7 @@ export const projectsData: Project[] = [
   },
   {
     img: "assets/images/electronics.avif",
-    video: "assets/images/rrpprocess.mp4",
+    video: "https://vimeo.com/1174022343",
     title: "RRP Electronics – Process AV",
     bgColor: "bg-white",
     className: "w-full h-full object-cover",
@@ -260,7 +260,7 @@ export const projectsData: Project[] = [
   },
   {
     img: "assets/images/defense.avif",
-    video: "assets/images/lidcom.mp4",
+    video: "https://vimeo.com/1174022037",
     title: "LIDCOM – Branding & Corporate Film",
     bgColor: "bg-white",
     className: "h-full w-auto",
@@ -282,7 +282,7 @@ export const projectsData: Project[] = [
   },
   {
     img: "assets/images/stuvio.png",
-    video: "assets/images/alviolife.mp4",
+    video: "https://vimeo.com/1174022783",
     title: "Alviolife – Laila Nutra Product Film",
     bgColor: "bg-white",
     className: "w-[80%] h-auto",

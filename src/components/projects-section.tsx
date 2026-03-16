@@ -77,14 +77,15 @@ export default function ProjectsSection() {
               className="flex flex-col justify-between rounded border p-4 cursor-pointer hover:shadow-lg transition-shadow bg-secondary/5"
             >
               <div className="flex flex-col">
-                <Link
-                  href={data.links.preview}
-                  aria-label={data.title}
-                  target="_blank"
+                <div
                   className={`overflow-hidden ${data.bgColor} group relative rounded flex justify-center items-center aspect-video w-full`}
                 >
                   {data.video ? (
-                    <OptimizedVideo videoSrc={data.video} />
+                    data.video.includes("vimeo.com") ? (
+                      <VimeoEmbed videoUrl={data.video} />
+                    ) : (
+                      <OptimizedVideo videoSrc={data.video} />
+                    )
                   ) : (
                     <Image
                       src={`/${data.img}`}
@@ -94,7 +95,15 @@ export default function ProjectsSection() {
                       className={cn(data.className, "transition-transform duration-500 group-hover:scale-105")}
                     />
                   )}
-                </Link>
+
+                  {/* Overlay link for the entire card image area */}
+                  <Link
+                    href={data.links.preview}
+                    aria-label={data.title}
+                    target="_blank"
+                    className="absolute inset-0 z-10"
+                  />
+                </div>
                 <h3 className="mt-4 mb-2 text-xl font-medium">{data.title}</h3>
                 <p className="text-muted-foreground mb-2.5 mt-1">
                   {data.description}

@@ -83,7 +83,7 @@ export default function ProjectLifecycle() {
 }
 
 function LifecycleIcon({ name }: { name: string }) {
-    const Icon = (Icons as any)[name];
+    const Icon = Icons[name as keyof typeof Icons];
     if (!Icon) return null;
     return <Icon className="size-5" />;
 }

@@ -1,13 +1,8 @@
 "use client";
 
 import { useSectionInView } from "@/hooks/use-section-in-view";
-import { siteConfig } from "@/lib/site-config";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import SectionHeading from "./section-heading";
-import Skills from "./skills";
-import { skillsData } from "@/lib/data";
-import { Badge } from "./ui/badge";
 
 const skills = [
   {

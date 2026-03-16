@@ -1,4 +1,3 @@
-import { env } from '@/env.mjs'
 
 export const siteConfig = {
   name: 'Jigar Chheda',

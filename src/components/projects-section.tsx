@@ -13,19 +13,6 @@ import { cn } from "@/lib/utils";
 
 const categories = ["All", "Digital (UI/UX & Tech)", "Branding", "AV & Films", "Ecommerce (Shopify)"] as const;
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.1 * index,
-    },
-  }),
-};
 
 export default function ProjectsSection() {
   const { ref } = useSectionInView("Case Studies");
@@ -79,7 +66,7 @@ export default function ProjectsSection() {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((data, index) => (
+          {filteredProjects.map((data) => (
             <motion.div
               layout
               key={data.title}
@@ -99,10 +86,12 @@ export default function ProjectsSection() {
                   {data.video ? (
                     <OptimizedVideo videoSrc={data.video} />
                   ) : (
-                    <img
-                      src={data.img}
+                    <Image
+                      src={`/${data.img}`}
                       alt={data.title}
-                      className={`${data.className} transition-transform duration-500 group-hover:scale-105`}
+                      width={500}
+                      height={300}
+                      className={cn(data.className, "transition-transform duration-500 group-hover:scale-105")}
                     />
                   )}
                 </Link>

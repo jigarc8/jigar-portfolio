@@ -1,4 +1,3 @@
-import { Icons } from '@/components/icons'
 import { Experience, NavLink, Project, Skill } from './types'
 
 export const navLinks: NavLink[] = [

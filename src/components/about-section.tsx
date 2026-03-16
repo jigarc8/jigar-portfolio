@@ -142,24 +142,24 @@ export default function AboutSection() {
                 <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-sm -z-10" />
 
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">
+                  <h3 className="text-xl font-bold text-foreground mb-2">
                     {category.title}
                   </h3>
-                  <p className="text-xs text-muted-foreground mb-6 line-clamp-2">
+                  <p className="text-sm text-muted-foreground mb-6 line-clamp-2">
                     {category.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-1.5 mt-auto">
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {category.items.map((item) => (
                       <span
                         key={item}
                         className="
                           inline-flex items-center rounded-md border 
-                          px-2 py-0.5 text-[11px] font-medium backdrop-blur-sm
-                          border-foreground/5
-                          bg-foreground/[0.03]
-                          text-foreground/80
-                          group-hover:border-primary/20
+                          px-2.5 py-1 text-xs font-medium backdrop-blur-sm
+                          border-foreground/10
+                          bg-foreground/[0.04]
+                          text-foreground/90
+                          group-hover:border-primary/30
                           transition-colors
                         "
                       >

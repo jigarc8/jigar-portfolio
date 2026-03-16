@@ -4,9 +4,13 @@ import { useSectionInView } from "@/hooks/use-section-in-view";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
 
+import { Icons } from "./icons";
+
 const skills = [
   {
     title: "Project Leadership",
+    icon: "briefcase",
+    description: "Driving project success through strategic leadership and orchestration.",
     items: [
       "Client servicing",
       "Project planning",
@@ -15,19 +19,27 @@ const skills = [
     ],
   },
   {
-    title: "Product & Delivery Tools",
-    items: ["Jira", "Zoho Projects", "Trello", "GanttPro"],
+    title: "Product & Tools",
+    icon: "star",
+    description: "Expert level proficiency in industry-standard management frameworks.",
+    items: ["Jira", "Zoho Projects", "Trello", "GanttPro", "Notion", "Slack"],
   },
   {
-    title: "Digital Product Stack",
-    items: ["WordPress", "Shopify", "Framer"],
+    title: "Digital Ecosystem",
+    icon: "building",
+    description: "Building and managing scalable digital presences across platforms.",
+    items: ["WordPress", "Shopify", "Framer", "Cpanel", "Vercel"],
   },
   {
     title: "Design & Growth",
+    icon: "download",
+    description: "Optimizing user experience and driving organic visibility.",
     items: ["Figma", "Adobe XD", "SEO"],
   },
   {
     title: "SEO Skills",
+    icon: "preview",
+    description: "Comprehensive search engine optimization and analytics suite.",
     items: [
       "On Page SEO",
       "Technical SEO",
@@ -39,11 +51,15 @@ const skills = [
   },
   {
     title: "Tech Skills",
+    icon: "arrowRight",
+    description: "Modern technical stack for high-performance web applications.",
     items: ["HTML", "CSS", "React JS", "Vercel", "Git", "Cpanel", "AWS"],
   },
   {
     title: "AI Tools",
-    items: ["Antigravity", "Google Flow"],
+    icon: "moon",
+    description: "Leveraging cutting-edge AI tools to enhance team productivity.",
+    items: ["Antigravity", "Google Flow", "Perplexity", "Midjourney"],
   },
 ];
 
@@ -106,41 +122,62 @@ export default function AboutSection() {
             {skills.map((category, index) => (
               <motion.div
                 key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className={`
-                  flex flex-col justify-between gap-10 rounded-xl border 
-                  bg-gradient-to-br p-5 md:p-6
-                  backdrop-blur-md
+                  group relative flex flex-col justify-between rounded-2xl border 
+                  bg-gradient-to-br p-6
+                  backdrop-blur-sm
                   border-foreground/10
                   from-foreground/5
-                  to-foreground/0
-                  hover:border-foreground/20 
-                  hover:bg-foreground/[0.06]
+                  to-transparent
+                  hover:border-primary/30 
+                  hover:bg-foreground/[0.04]
+                  transition-all duration-300
                   ${index === 0
-                    ? "md:col-span-2 md:row-span-2 w-full h-fit md:h-full"
-                    : index >= 3
-                      ? "@6xl:aspect-video md:col-span-3 @6xl:col-span-2 h-fit md:h-full row-span-1"
-                      : "@6xl:aspect-video md:col-span-4 @6xl:col-span-2 h-fit md:h-full row-span-1"
+                    ? "md:col-span-3 md:row-span-1"
+                    : "md:col-span-3 lg:col-span-2"
                   }
                 `}
               >
-                <h3 className="mb-3 text-base md:text-lg font-semibold text-foreground/90">
-                  {category.title}
-                </h3>
+                {/* Glow Effect */}
+                <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-sm -z-10" />
 
-                <div className="flex flex-wrap gap-2 text-sm text-foreground/70">
-                  {category.items.map((item) => (
-                    <span
-                      key={item}
-                      className="
-                        rounded-full border 
-                        px-2.5 py-1 text-xs md:text-sm backdrop-blur-sm
-                        border-foreground/10
-                        bg-foreground/5
-                      "
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <SkillIcon name={category.icon} />
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">
+                    {category.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground mb-6 line-clamp-2">
+                    {category.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5 mt-auto">
+                    {category.items.map((item) => (
+                      <span
+                        key={item}
+                        className="
+                          inline-flex items-center rounded-md border 
+                          px-2 py-0.5 text-[11px] font-medium backdrop-blur-sm
+                          border-foreground/5
+                          bg-foreground/[0.03]
+                          text-foreground/80
+                          group-hover:border-primary/20
+                          transition-colors
+                        "
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -149,4 +186,10 @@ export default function AboutSection() {
       </motion.section>
     </>
   );
+}
+
+function SkillIcon({ name }: { name: string }) {
+  const Icon = Icons[name as keyof typeof Icons];
+  if (!Icon) return null;
+  return <Icon className="size-5" />;
 }

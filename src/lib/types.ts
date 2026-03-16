@@ -18,7 +18,7 @@ export type Project = {
   tools?: string[]
   video?: string
   process?: string
-  category: "Digital (UI/UX & Tech)" | "Branding" | "AV & Films" | "Ecommerce"
+  category: "Digital (UI/UX & Tech)" | "Branding" | "AV / Films & Brand Content" | "Ecommerce"
 }
 
 export type Experience = {

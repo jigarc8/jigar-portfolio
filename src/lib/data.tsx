@@ -216,21 +216,25 @@ export const projectsData: Project[] = [
   },
   {
     img: "assets/images/electronics.avif",
-    video: "assets/videos/magic-bento-demo.mp4",
-    title: "Magic Bento: Brand Film",
+    video: "assets/videos/Revised Vimananu_Av.mp4",
+    title: "RRP Group – Corporate AV & Brand Films",
     bgColor: "bg-black",
     className: "w-full h-full object-cover",
-    subTitle: "Film Production Management",
+    subTitle: "Aerospace / Electronics Technology",
+    result: [
+      { percent: "3", text: "Group Companies Featured" },
+      { percent: "10+", text: "AV & Visual Assets Produced" },
+    ],
     description:
-      "Produced a high-energy brand film showcasing product features through immersive motion graphics and sound design.",
+      "Delivered a group-level corporate AV showcasing the innovation and capabilities of RRP Electronics, RRP Drones, and RRP Vimananu, highlighting the organization’s contributions across aerospace and electronics technologies.",
     links: {
       preview: "#",
       github: "#",
       githubApi: "#",
     },
-    tools: ["Jira", "After Effects (Coordination)", "Slack"],
-    process: "Spearheaded the video production pipeline, coordinating between motion designers, editors, and sound engineers to meet a tight deadline.",
-    category: "AV & Films",
+    tools: ["Aerospace / Electronics Technology"],
+    process: "Managed end-to-end AV production across multiple business units—coordinating scripting, storyboarding, filming, editing, and stakeholder approvals to create a unified brand narrative for the entire RRP Group.",
+    category: "AV / Films & Brand Content",
   },
 ] as const;
 

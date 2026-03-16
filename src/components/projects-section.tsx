@@ -11,7 +11,7 @@ import { Badge } from "./ui/badge";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const categories = ["All", "Digital (UI/UX & Tech)", "Branding", "AV & Films", "Ecommerce"] as const;
+const categories = ["All", "Digital (UI/UX & Tech)", "Branding", "AV / Films & Brand Content", "Ecommerce"] as const;
 
 
 export default function ProjectsSection() {

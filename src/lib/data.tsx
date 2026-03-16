@@ -108,22 +108,22 @@ export const projectsData: Project[] = [
   {
     img: "assets/images/drone.avif",
     bgColor: "bg-white",
-    title: "RRP Drones",
+    title: "RRP Drones – Interactive Product Experience",
     className: "",
-    subTitle: "Experience-Driven Website",
+    subTitle: "Aerospace & Drone Technology",
     result: [
-      { percent: "2×", text: "User Engagement" },
-      { percent: "45%", text: "Demo Signups" },
+      { percent: "3600+", text: "Assets Managed" },
+      { percent: "Smooth 60 FPS", text: "Optimized Performance" },
     ],
     description:
-      "Creating an immersive digital experience through innovative scroll-based design",
+      "Delivered an immersive scroll-driven product experience website showcasing drone technology with high-resolution visuals and interactive storytelling.",
     links: {
       preview: "https://www.rrpdrones.com",
       github: "#",
       githubApi: "#",
     },
-    tools: ["Corporate/Defence/Experience"],
-    process: "Managed high-fidelity design execution with a focus on immersive UX, coordinating between motion designers and front-end devs.",
+    tools: ["Aerospace / Drone Technology"],
+    process: "Led cross-functional coordination between design and development teams to manage 3600+ heavy assets, resolved rendering and loading bottlenecks, and optimized performance to deliver a seamless interactive experience across devices.",
     category: "Digital (UI/UX & Tech)",
   },
   {

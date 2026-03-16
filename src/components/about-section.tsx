@@ -16,6 +16,8 @@ const skills = [
       "Project planning",
       "Resource management",
       "Team coordination",
+      "Agile Methodology",
+      "Project Budgeting"
     ],
   },
   {
@@ -25,16 +27,16 @@ const skills = [
     items: ["Jira", "Zoho Projects", "Trello", "GanttPro", "Notion", "Slack"],
   },
   {
-    title: "Digital Ecosystem",
+    title: "CMS Skills",
     icon: "building",
     description: "Building and managing scalable digital presences across platforms.",
-    items: ["WordPress", "Shopify", "Framer", "Cpanel", "Vercel"],
+    items: ["Shopify", "Wordpress", "Framer", "Strapi", "Wix Studio", "Webflow"],
   },
   {
-    title: "Design & Growth",
+    title: "Design Skills",
     icon: "download",
     description: "Optimizing user experience and driving organic visibility.",
-    items: ["Figma", "Adobe XD", "SEO"],
+    items: ["Figma", "Adobe XD", "Adobe Illustrator", "Adobe Photoshop", "Canva"],
   },
   {
     title: "SEO Skills",
@@ -59,7 +61,7 @@ const skills = [
     title: "AI Tools",
     icon: "moon",
     description: "Leveraging cutting-edge AI tools to enhance team productivity.",
-    items: ["Antigravity", "Google Flow", "Perplexity", "Midjourney"],
+    items: ["Antigravity", "Google Flow", "ChatGPT", "Midjourney"],
   },
 ];
 
@@ -82,7 +84,7 @@ export default function AboutSection() {
             style={{ fontSize: "clamp(1rem, 0.951rem + 0.22vw, 1.125rem)" }}
             className="mb-0"
           >
-            I'm a Certified ScrumMaster with 5+ years of experience managing digital projects, websites, and product teams. I enjoy working at the intersection of design, technology, and business — helping teams transform ideas into scalable digital experiences.
+            I'm a Certified ScrumMaster with 5+ years of experience managing digital projects, websites, Branding, AVs and product teams. I enjoy working at the intersection of design, technology, and business, helping teams transform ideas into scalable digital experiences.
           </p>
           {/* <p>
             <Link

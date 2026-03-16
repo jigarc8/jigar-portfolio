@@ -27,6 +27,21 @@ const skills = [
     items: ["Figma", "Adobe XD", "SEO"],
   },
   {
+    title: "SEO Skills",
+    items: [
+      "On Page SEO",
+      "Technical SEO",
+      "Google Keyword Planner",
+      "Google Analytics",
+      "Google search Console",
+      "Microsoft Clarity",
+    ],
+  },
+  {
+    title: "Tech Skills",
+    items: ["HTML", "CSS", "React JS", "Vercel", "Git", "Cpanel", "AWS"],
+  },
+  {
     title: "AI Tools",
     items: ["Antigravity", "Google Flow"],
   },

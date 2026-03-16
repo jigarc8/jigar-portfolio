@@ -1,0 +1,45 @@
+import { env } from '@/env.mjs'
+
+export const siteConfig = {
+  name: 'Jigar Chheda',
+  title: 'Jigar Chheda | Project Lead',
+  description:
+    "I'm Jigar Chheda, a Project and Operations Manager with 5+ years of experience in managing cross-functional teams, delivering digital projects, and improving operational efficiency. With expertise in Agile, Scrum, and tools like Jira, Trello, GanttPro, and Zoho Projects, I ensure smooth execution and measurable results.",
+  keywords: [
+    'Jigar Chheda',
+    'Project Lead',
+    'Poland',
+    'React',
+    'Next.js',
+    'Web development',
+    'Front-end',
+    'UI/UX',
+    'Responsive design',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Portfolio',
+    'Projects',
+    'Website',
+    'Web applications',
+    'Developer',
+    'Code',
+    'Programming',
+    'Tech enthusiast',
+  ],
+  creator: 'Jigar Chheda',
+  url: '#',
+  contact: {
+    email: 'jigarc8@gmail.com',
+    linkedin: 'http://linkedin.com/in/jigar-chheda-b22882124/',
+    github: '#',
+  },
+  links: {
+    contactForm: '/#contact',
+    linkedin: 'http://linkedin.com/in/jigar-chheda-b22882124/',
+    github: '#',
+    mailTo: 'mailto:jigarc8@gmail.com',
+    cvPdf: '/jigar-chheda.pdf',
+    jigarLinkedIn: 'http://linkedin.com/in/jigar-chheda-b22882124/',
+  },
+}

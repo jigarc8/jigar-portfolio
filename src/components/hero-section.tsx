@@ -1,0 +1,115 @@
+'use client'
+import { useSectionInView } from '@/hooks/use-section-in-view'
+import { siteConfig } from '@/lib/site-config'
+import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Icons } from './icons'
+import { Button } from './ui/button'
+import { GridPattern } from './ui/grid-pattern'
+import MetricsCounter from './metrics-counter'
+
+export default function HeroSection() {
+  const { ref } = useSectionInView('Home')
+
+  return (
+    <section
+      ref={ref}
+      id="home"
+      className="relative flex flex-col items-center justify-center gap-5 text-center min-h-[90svh] sm:min-h-screen py-20"
+    >
+      <GridPattern
+        width={80}
+        height={120}
+        squares={[
+          [0, 3],
+          [3, 1],
+          [2, 0],
+          [7, 2],
+          [8, 3],
+          [2, 4],
+          [6, 4],
+        ]}
+        strokeDasharray={"4"}
+        className={cn(
+          "absolute inset-0",
+          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+          "opacity-80"
+        )}
+      />
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          type: "tween",
+          duration: 0.2,
+          ease: "easeOut",
+        }}
+      >
+        <Link
+          href={siteConfig.links.contactForm}
+          className="flex items-center gap-3 rounded border px-3 py-1"
+        >
+          <span className="relative flex size-2">
+            <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75" />
+            <span className="relative flex size-2 rounded-full bg-green-400"></span>
+          </span>
+          <span className="text-sm">Available for work!</span>
+        </Link>
+      </motion.div>
+      <motion.h1
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="font-heading max-w-3xl leading-[120%] text-4xl font-extrabold md:text-5xl"
+      >
+        Project Lead <br />
+        <span className="bg-gradient-to-tr from-[#0f8fff] to-[#d384fa] bg-clip-text text-transparent">
+          Driving Digital Success
+        </span>{" "}
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+          ease: "easeOut",
+        }}
+        className="text-muted-foreground max-w-xl"
+      >
+        Project Lead - Certified Scrum Master <br /> 5+ Years of experience
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+          ease: "easeOut",
+        }}
+        className="flex flex-row gap-2 items-center"
+      >
+        <Button asChild size="lg">
+          <Link href={siteConfig.links.contactForm}>
+            Get in touch <Icons.arrowRight className="ml-2 size-4" />
+          </Link>
+        </Button>
+        <Button variant="outline" size="lg" className="flex" asChild>
+          <a href={siteConfig.links.cvPdf} download>
+            Download CV <Icons.download className="ml-2 size-4" />
+          </a>
+        </Button>
+        <Button variant="outline" size="icon" asChild>
+          <Link
+            href={siteConfig.links.linkedin}
+            aria-label="Linkedin"
+            target="_blank"
+          >
+            <Icons.linkedin className="size-5" />
+          </Link>
+        </Button>
+      </motion.div>
+
+      <MetricsCounter />
+    </section>
+  );
+}

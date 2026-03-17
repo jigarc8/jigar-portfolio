@@ -65,7 +65,7 @@ export default function HeroSection() {
       >
         Project Lead <br />
         <span className="bg-gradient-to-tr from-[#0f8fff] to-[#d384fa] bg-clip-text text-transparent">
-          Whatever the Work, I Get It Done.
+          Whatever the Work, <br /> I Get It Done.
         </span>{" "}
       </motion.h1>
       <motion.p

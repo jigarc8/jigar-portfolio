@@ -3,7 +3,7 @@ export const siteConfig = {
   name: 'Jigar Chheda',
   title: 'Jigar Chheda | Project Lead',
   description:
-    "I'm Jigar Chheda, a Project and Operations Manager with 5+ years of experience in managing cross-functional teams, delivering digital projects, and improving operational efficiency. With expertise in Agile, Scrum, and tools like Jira, Trello, GanttPro, and Zoho Projects, I ensure smooth execution and measurable results.",
+    "I'm Jigar Chheda, a Project Lead with 5+ years of experience in managing cross-functional teams, delivering digital projects, and improving operational efficiency. With expertise in Agile, Scrum, and tools like Jira, Trello, GanttPro, and Zoho Projects, I ensure smooth execution and measurable results.",
   keywords: [
     'Jigar Chheda',
     'Project Lead',

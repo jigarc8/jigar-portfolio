@@ -237,6 +237,28 @@ export const projectsData: Project[] = [
   },
   {
     img: "assets/images/electronics.avif",
+    video: "assets/videos/Kohrra.mp4",
+    title: "Kohrra (Netflix) – Title & Motion Design",
+    bgColor: "bg-white",
+    className: "w-full h-full object-cover",
+    subTitle: "Titles & Motion Graphics",
+    description:
+      "Delivered high-impact title sequences and motion graphics for the critically acclaimed Netflix series Kohrra, enhancing the show’s moody atmosphere through sophisticated visual design.",
+    links: {
+      preview: "https://www.netflix.com/title/81592257",
+      github: "#",
+      githubApi: "#",
+    },
+    metrics: [
+      { percent: "1", text: "Main Title Sequence" },
+      { percent: "Top 10", text: "Global Trending" },
+    ],
+    tools: ["Netflix", "OTT"],
+    process: "Coordinated between creative and production teams to deliver high-quality title sequences under tight global launch deadlines, ensuring tonal consistency with the show's dark narrative.",
+    category: "AV / Films & Brand Content",
+  },
+  {
+    img: "assets/images/electronics.avif",
     video: "https://vimeo.com/1174022343",
     title: "RRP Electronics – Process AV",
     bgColor: "bg-white",

@@ -178,9 +178,3 @@ export default function AboutSection() {
     </>
   );
 }
-
-function SkillIcon({ name }: { name: string }) {
-  const Icon = Icons[name as keyof typeof Icons];
-  if (!Icon) return null;
-  return <Icon className="size-5" />;
-}

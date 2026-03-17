@@ -27,7 +27,7 @@ export const siteConfig = {
     'Tech enthusiast',
   ],
   creator: 'Jigar Chheda',
-  url: '#',
+  url: 'https://jigar-chheda.vercel.app',
   contact: {
     email: 'jigarc8@gmail.com',
     linkedin: 'http://linkedin.com/in/jigar-chheda-b22882124/',

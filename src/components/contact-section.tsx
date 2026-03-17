@@ -32,7 +32,7 @@ export default function ContactSection() {
         heading="Get In Touch"
         content={
           <>
-            Open to full-time Project Lead roles. Reach me at{" "}
+            Open to full-time Project Lead/Manager roles. Reach me at{" "}
             <Button
               variant="link"
               className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"

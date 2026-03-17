@@ -12,7 +12,7 @@ const metrics = [
         value: "10+",
     },
     {
-        label: "On-Time Launch",
+        label: "Stakeholder Satisfaction",
         value: "100%",
     },
     {

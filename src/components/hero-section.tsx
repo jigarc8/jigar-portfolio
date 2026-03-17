@@ -65,7 +65,7 @@ export default function HeroSection() {
       >
         Project Lead <br />
         <span className="bg-gradient-to-tr from-[#0f8fff] to-[#d384fa] bg-clip-text text-transparent">
-          Bridging Strategy, Design & Tech
+          Whatever the Work, I Get It Done.
         </span>{" "}
       </motion.h1>
       <motion.p
@@ -77,7 +77,7 @@ export default function HeroSection() {
         }}
         className="text-muted-foreground max-w-xl"
       >
-        Project Lead - Certified Scrum Master <br /> 5+ Years of experience
+        Project Lead - Certified Scrum Master <br /> Design, Tech & Business
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}

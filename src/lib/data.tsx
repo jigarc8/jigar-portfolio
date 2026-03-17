@@ -22,6 +22,28 @@ export const navLinks: NavLink[] = [
 export const projectsData: Project[] = [
   {
     img: "assets/images/stuvio.png",
+    video: "assets/videos/Hitech.mov",
+    title: "Hitech Coders",
+    bgColor: "bg-white",
+    className: "bg-white w-[90%] h-auto object-cover object-center",
+    subTitle: "Startup Agency / Digital Solutions",
+    result: [
+      { percent: "4 Years", text: "Agency Leadership" },
+      { percent: "100%", text: "Project Success" },
+    ],
+    description:
+      "Founded and managed a digital solutions startup delivering high-impact projects across multiple industries—scaling from vision to full-scale delivery.",
+    links: {
+      preview: "https://hitechcoders.com",
+      github: "#",
+      githubApi: "#",
+    },
+    tools: ["React", "Next.js", "SDLC", "Product Management"],
+    process: "Led end-to-end project delivery from requirement gathering and PRD creation to supervising UI/UX and development for timely execution.",
+    category: "Agency",
+  },
+  {
+    img: "assets/images/stuvio.png",
     title: "Stuvio",
     bgColor: "bg-white",
     className: "bg-white w-[90%] h-auto object-cover object-center",

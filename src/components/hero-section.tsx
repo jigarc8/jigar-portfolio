@@ -55,7 +55,7 @@ export default function HeroSection() {
             <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75" />
             <span className="relative flex size-2 rounded-full bg-green-400"></span>
           </span>
-          <span className="text-sm">Available for work!</span>
+          <span className="text-sm">Open to Opportunities</span>
         </Link>
       </motion.div>
       <motion.h1
@@ -65,7 +65,7 @@ export default function HeroSection() {
       >
         Project Lead <br />
         <span className="bg-gradient-to-tr from-[#0f8fff] to-[#d384fa] bg-clip-text text-transparent">
-          Driving Digital Success
+          Bridging Design, Tech & Business to Ship What Matters
         </span>{" "}
       </motion.h1>
       <motion.p

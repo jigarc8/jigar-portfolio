@@ -249,7 +249,7 @@ export const projectsData: Project[] = [
       github: "#",
       githubApi: "#",
     },
-    metrics: [
+    result: [
       { percent: "1", text: "Main Title Sequence" },
       { percent: "Top 10", text: "Global Trending" },
     ],

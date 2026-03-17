@@ -32,7 +32,7 @@ export default function ContactSection() {
         heading="Get In Touch"
         content={
           <>
-            Please contact me directly at{" "}
+            Open to full-time Project Lead roles. Reach me at{" "}
             <Button
               variant="link"
               className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"
@@ -40,6 +40,16 @@ export default function ContactSection() {
             >
               <Link href={siteConfig.links.mailTo}>
                 {siteConfig.contact.email}
+              </Link>
+            </Button>
+            {" "}or on{" "}
+            <Button
+              variant="link"
+              className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"
+              asChild
+            >
+              <Link href={siteConfig.links.linkedin} target="_blank">
+                LinkedIn
               </Link>
             </Button>.
           </>

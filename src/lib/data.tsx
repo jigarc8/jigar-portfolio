@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
       githubApi: "#",
     },
     tools: ["Digital Agency"],
-    process: "Led agile transformation across teams, streamlined project workflows, coordinated 10+ concurrent workstreams, and improved the agency’s digital presence to drive inbound leads and hiring traction.",
+    process: "Led agile transformation across 10+ workstreams, driving 50% more business leads and 70% more job applications.",
     category: "Digital (UI/UX & Tech)",
   },
   {
@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
       { percent: "1 Month", text: "End-to-End Launch" },
     ],
     description:
-      "Delivered a full-scale lending platform enabling customers to explore loan products and initiate digital applications across multiple financial services.",
+      "Delivered a full lending platform — personal, business, and property loans — end-to-end in one month.",
     links: {
       preview: "https://www.jayostute.com/",
       github: "#",
@@ -102,7 +102,7 @@ export const projectsData: Project[] = [
       githubApi: "#",
     },
     tools: ["Ecommerce"],
-    process: "Bridged communication between design and tech teams to deliver a landmark community-first e-commerce experience.",
+    process: "Delivered a community-first e-commerce platform — 8.5L+ visitors in 4 months, 153% YoY user growth.Bridged communication between design and tech teams to deliver a landmark community-first e-commerce experience.",
     category: "Ecommerce",
   },
   {
@@ -123,7 +123,7 @@ export const projectsData: Project[] = [
       githubApi: "#",
     },
     tools: ["Aerospace / Drone Technology"],
-    process: "Led cross-functional coordination between design and development teams to manage 3600+ heavy assets, resolved rendering and loading bottlenecks, and optimized performance to deliver a seamless interactive experience across devices.",
+    process: "Managed 3,600+ assets across design and dev, delivering a smooth 60fps scroll-driven experience — featured in the Kyoorius Design Awards 2025.",
     category: "Digital (UI/UX & Tech)",
   },
   {
@@ -141,7 +141,7 @@ export const projectsData: Project[] = [
       githubApi: "#",
     },
     tools: ["Corporate"],
-    process: "Orchestrated a fast-paced multi-channel launch, ensuring brand consistency across defense and consumer electronics divisions.",
+    process: "Led a multi-channel digital launch achieving 120% user acquisition across electronics and defense divisions.",
     category: "Digital (UI/UX & Tech)",
   },
   {
@@ -159,7 +159,7 @@ export const projectsData: Project[] = [
       githubApi: "#",
     },
     tools: ["Corporate/Defence"],
-    process: "Ensured 100% on-time delivery for a high-security defense sector website, managing strict compliance and stakeholder approval cycles.",
+    process: "Delivered a compliance-ready defense website managing strict approvals and regulatory requirements.",
     category: "Digital (UI/UX & Tech)",
   },
   {
@@ -177,7 +177,7 @@ export const projectsData: Project[] = [
       githubApi: "#",
     },
     tools: ["Real Estate"],
-    process: "Strategic lead for real estate digital transformation, focusing on funnel optimization and high-quality lead capture workflows.",
+    process: "Led real estate digital transformation driving a 2.3x increase in qualified leads.",
     category: "Digital (UI/UX & Tech)",
   },
   {

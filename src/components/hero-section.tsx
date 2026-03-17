@@ -65,7 +65,7 @@ export default function HeroSection() {
       >
         Project Lead <br />
         <span className="bg-gradient-to-tr from-[#0f8fff] to-[#d384fa] bg-clip-text text-transparent">
-          Bridging Design, Tech & Business to Ship What Matters
+          Bridging Strategy, Design & Tech
         </span>{" "}
       </motion.h1>
       <motion.p

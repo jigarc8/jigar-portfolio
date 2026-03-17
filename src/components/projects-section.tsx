@@ -104,12 +104,14 @@ export default function ProjectsSection() {
                   )}
 
                   {/* Overlay link for the entire card image area */}
-                  <Link
-                    href={data.links.preview}
-                    aria-label={data.title}
-                    target="_blank"
-                    className="absolute inset-0 z-10"
-                  />
+                  {data.category !== "Branding and AV/Films" && (
+                    <Link
+                      href={data.links.preview}
+                      aria-label={data.title}
+                      target="_blank"
+                      className="absolute inset-0 z-10"
+                    />
+                  )}
                 </div>
                 <h3 className="mt-4 mb-2 text-xl font-medium">{data.title}</h3>
                 <p className="text-muted-foreground mb-2.5 mt-1">
@@ -162,9 +164,11 @@ export default function ProjectsSection() {
                 )}
               </div>
 
-              <Badge link={`${data.links.preview}`} variant={"outline"} size={"lg"}>
-                Visit the Website
-              </Badge>
+              {data.category !== "Branding and AV/Films" && (
+                <Badge link={`${data.links.preview}`} variant={"outline"} size={"lg"}>
+                  Visit the Website
+                </Badge>
+              )}
             </motion.div>
           ))}
         </AnimatePresence>

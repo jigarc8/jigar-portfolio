@@ -30,15 +30,15 @@ export const siteConfig = {
   url: 'https://jigar-chheda.vercel.app',
   contact: {
     email: 'jigarc8@gmail.com',
-    linkedin: 'http://linkedin.com/in/jigar-chheda-b22882124/',
+    linkedin: 'https://www.linkedin.com/in/jigarchheda2212/',
     github: '#',
   },
   links: {
     contactForm: '/#contact',
-    linkedin: 'http://linkedin.com/in/jigar-chheda-b22882124/',
+    linkedin: 'https://www.linkedin.com/in/jigarchheda2212/',
     github: '#',
     mailTo: 'mailto:jigarc8@gmail.com',
     cvPdf: '/jigar-chheda.pdf',
-    jigarLinkedIn: 'http://linkedin.com/in/jigar-chheda-b22882124/',
+    jigarLinkedIn: 'https://www.linkedin.com/in/jigarchheda2212/',
   },
 }

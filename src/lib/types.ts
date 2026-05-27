@@ -3,6 +3,7 @@ import { navLinks } from '@/lib/data'
 export type SectionName = (typeof navLinks)[number]['name']
 
 export type Project = {
+  slug: string
   img: string
   title: string
   className: string

@@ -37,7 +37,7 @@ export default function MetricsCounter() {
                         initial={{ scale: 0.5 }}
                         whileInView={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 100, delay: index * 0.1 + 0.2 }}
-                        className="text-3xl md:text-4xl font-bold bg-gradient-to-tr from-[#0f8fff] to-[#d384fa] bg-clip-text text-transparent"
+                        className="text-3xl md:text-4xl font-bold bg-gradient-to-tr from-[#0f8fff] to-[#4573AA] bg-clip-text text-transparent"
                     >
                         {metric.value}
                     </motion.span>

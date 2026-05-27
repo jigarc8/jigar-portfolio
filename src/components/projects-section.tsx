@@ -13,6 +13,13 @@ import { cn } from "@/lib/utils";
 
 const categories = ["All", "Digital (UI/UX & Tech)", "Agency", "Branding and AV/Films", "Ecommerce"] as const;
 
+const availableCaseStudySlugs = [
+  "kokuyo-camlin",
+  "rrp-drones",
+  "shapoorji-pallonji",
+  "mitl-digital",
+  "jayostute-capital",
+];
 
 export default function ProjectsSection() {
   const { ref } = useSectionInView("Case Studies");
@@ -73,104 +80,116 @@ export default function ProjectsSection() {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((data) => (
-            <motion.div
-              layout
-              key={data.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
-              transition={{ duration: 0.4 }}
-              className="flex flex-col justify-between rounded border p-4 cursor-pointer hover:shadow-lg transition-shadow bg-secondary/5"
-            >
-              <div className="flex flex-col">
-                <div
-                  className={`overflow-hidden ${data.bgColor} group relative rounded flex justify-center items-center aspect-video w-full`}
-                >
-                  {data.video ? (
-                    data.video.includes("vimeo.com") ? (
-                      <VimeoEmbed videoUrl={data.video} />
+          {filteredProjects.map((data) => {
+            const hasCaseStudy = availableCaseStudySlugs.includes(data.slug);
+
+            return (
+              <motion.div
+                layout
+                key={data.title}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
+                transition={{ duration: 0.4 }}
+                className={cn(
+                  "flex flex-col justify-between rounded border p-4 transition-shadow bg-secondary/5",
+                  hasCaseStudy ? "cursor-pointer hover:shadow-lg" : "opacity-80"
+                )}
+              >
+                <div className="flex flex-col">
+                  <div
+                    className={`overflow-hidden ${data.bgColor} group relative rounded flex justify-center items-center aspect-video w-full`}
+                  >
+                    {data.video ? (
+                      data.video.includes("vimeo.com") ? (
+                        <VimeoEmbed videoUrl={data.video} />
+                      ) : (
+                        <OptimizedVideo videoSrc={data.video} />
+                      )
                     ) : (
-                      <OptimizedVideo videoSrc={data.video} />
-                    )
-                  ) : (
-                    <Image
-                      src={`/${data.img}`}
-                      alt={data.title}
-                      width={500}
-                      height={300}
-                      className={cn(data.className, "transition-transform duration-500 group-hover:scale-105")}
-                    />
-                  )}
-
-                  {/* Overlay link for the entire card image area */}
-                  {data.category !== "Branding and AV/Films" && (
-                    <Link
-                      href={data.links.preview}
-                      aria-label={data.title}
-                      target="_blank"
-                      className="absolute inset-0 z-10"
-                    />
-                  )}
-                </div>
-                <h3 className="mt-4 mb-2 text-xl font-medium">{data.title}</h3>
-                <p className="text-muted-foreground mb-2.5 mt-1">
-                  {data.description}
-                </p>
-
-                {/* Industry Category Badge */}
-                <div className="mb-4">
-                  <span className="text-[10px] uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 text-primary font-bold border border-primary/20">
-                    {data.category}
-                  </span>
-                </div>
-
-                {data.result?.length ? (
-                  <ul className="text-muted-foreground mb-5 mt-2.5 text-sm gap-6 flex justify-start items-center">
-                    {data.result.map((res, index) => (
-                      <React.Fragment key={index}>
-                        <li className="w-[45%] flex flex-col justify-center items-start">
-                          {res.percent && <p className="font-bold text-foreground">{res.percent}</p>}
-                          <p>{res.text}</p>
-                        </li>
-                        {index !== (data.result?.length ?? 0) - 1 && (
-                          <li className="w-0.5 h-10 bg-muted"></li>
+                      <Image
+                        src={`/${data.img}`}
+                        alt={data.title}
+                        width={500}
+                        height={300}
+                        className={cn(
+                          data.className,
+                          hasCaseStudy && "transition-transform duration-500 group-hover:scale-105"
                         )}
-                      </React.Fragment>
-                    ))}
-                  </ul>
-                ) : null}
+                      />
+                    )}
 
-                {data.process && (
+                    {hasCaseStudy && (
+                      <Link
+                        href={`/case-studies/${data.slug}`}
+                        aria-label={data.title}
+                        className="absolute inset-0 z-10"
+                      />
+                    )}
+                  </div>
+                  <h3 className="mt-4 mb-2 text-xl font-medium">{data.title}</h3>
+                  <p className="text-muted-foreground mb-2.5 mt-1">
+                    {data.description}
+                  </p>
+
+                  {/* Industry Category Badge */}
                   <div className="mb-4">
-                    <p className="text-xs font-semibold text-primary mb-1 uppercase tracking-tighter opacity-80 underline underline-offset-2">PM Process Insight:</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed border-l-2 border-primary/20 pl-3 italic">
-                      {data.process}
-                    </p>
+                    <span className="text-[10px] uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 text-primary font-bold border border-primary/20">
+                      {data.category}
+                    </span>
                   </div>
-                )}
 
-                {data.tools && (
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {data.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="px-2 py-0.5 rounded-full bg-secondary text-[11px] font-medium text-secondary-foreground border border-secondary"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
+                  {data.result?.length ? (
+                    <ul className="text-muted-foreground mb-5 mt-2.5 text-sm gap-6 flex justify-start items-center">
+                      {data.result.map((res, index) => (
+                        <React.Fragment key={index}>
+                          <li className="w-[45%] flex flex-col justify-center items-start">
+                            {res.percent && <p className="font-bold text-foreground">{res.percent}</p>}
+                            <p>{res.text}</p>
+                          </li>
+                          {index !== (data.result?.length ?? 0) - 1 && (
+                            <li className="w-0.5 h-10 bg-muted"></li>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </ul>
+                  ) : null}
 
-              {data.category !== "Branding and AV/Films" && (
-                <Badge link={`${data.links.preview}`} variant={"outline"} size={"lg"}>
-                  Visit the Website
-                </Badge>
-              )}
-            </motion.div>
-          ))}
+                  {data.process && (
+                    <div className="mb-4">
+                      <p className="text-xs font-semibold text-primary mb-1 uppercase tracking-tighter opacity-80 underline underline-offset-2">PM Process Insight:</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed border-l-2 border-primary/20 pl-3 italic">
+                        {data.process}
+                      </p>
+                    </div>
+                  )}
+
+                  {data.tools && (
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {data.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="px-2 py-0.5 rounded-full bg-secondary text-[11px] font-medium text-secondary-foreground border border-secondary"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {hasCaseStudy ? (
+                  <Badge link={`/case-studies/${data.slug}`} variant={"outline"} size={"lg"}>
+                    View Case Study
+                  </Badge>
+                ) : (
+                  <Badge variant={"outline"} size={"lg"} className="text-muted-foreground">
+                    Coming Soon
+                  </Badge>
+                )}
+              </motion.div>
+            );
+          })}
         </AnimatePresence>
       </div>
     </section>

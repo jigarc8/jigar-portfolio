@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 import { ReactLenis } from "lenis/react";
 import Header from '@/components/header'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { Analytics } from "@vercel/analytics/next"
 import './globals.css'
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             <ActionSectionProvider>
               <Header />
               {children}
+              <ThemeToggle className="bg-background hidden sm:fixed sm:bottom-8 sm:right-8 sm:flex" />
             </ActionSectionProvider>
             <Analytics />
           </ThemeProvider>

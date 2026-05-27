@@ -36,7 +36,7 @@ export default function ProjectLifecycle() {
         <section className="py-24 w-full">
             <div className="flex flex-col items-center mb-16 text-center">
                 <h2 className="text-3xl font-bold mb-4 uppercase tracking-wider italic">Professional PM Lifecycle</h2>
-                <div className="h-1 w-20 bg-gradient-to-r from-[#0f8fff] to-[#d384fa] rounded-full" />
+                <div className="h-1 w-20 bg-gradient-to-r from-[#0f8fff] to-[#4573AA] rounded-full" />
             </div>
 
             <div className="relative max-w-5xl mx-auto px-4">

@@ -21,6 +21,7 @@ export const navLinks: NavLink[] = [
 
 export const projectsData: Project[] = [
   {
+    slug: "kohrra-netflix",
     img: "assets/images/electronics.avif",
     video: "assets/videos/Kohrra.mp4",
     title: "Kohrra (Netflix) – Title & Motion Design",
@@ -43,6 +44,7 @@ export const projectsData: Project[] = [
     category: "Branding and AV/Films",
   },
   {
+    slug: "kokuyo-camlin",
     img: "assets/images/camlin.webp",
     title: "Kokuyo Camlin",
     bgColor: "bg-white",
@@ -64,6 +66,7 @@ export const projectsData: Project[] = [
     category: "Ecommerce",
   },
   {
+    slug: "rrp-drones",
     img: "assets/images/drone.avif",
     bgColor: "bg-white",
     title: "RRP Drones – Interactive Product Experience",
@@ -85,6 +88,7 @@ export const projectsData: Project[] = [
     category: "Digital (UI/UX & Tech)",
   },
   {
+    slug: "shapoorji-pallonji",
     img: "assets/images/shapoorji.png",
     title: "Shapoorji Pallonji",
     bgColor: "bg-[#fff]",
@@ -103,6 +107,7 @@ export const projectsData: Project[] = [
     category: "Digital (UI/UX & Tech)",
   },
   {
+    slug: "mitl-digital",
     img: "assets/images/mitl.avif",
     title: "MITL Digital Transformation",
     bgColor: "bg-white",
@@ -124,7 +129,8 @@ export const projectsData: Project[] = [
     category: "Digital (UI/UX & Tech)",
   },
   {
-    img: "assets/images/jayostute.png",
+    slug: "jayostute-capital",
+    img: "assets/images/Jayostute.png",
     title: "Jayostute Capital",
     bgColor: "bg-white",
     className: "w-[90%] h-auto object-cover object-center",
@@ -146,6 +152,7 @@ export const projectsData: Project[] = [
     category: "Digital (UI/UX & Tech)",
   },
   {
+    slug: "magnetic-maharashtra",
     img: "assets/images/mm.png",
     title: "Magnetic Maharashtra",
     bgColor: "bg-[#fff]",
@@ -163,6 +170,7 @@ export const projectsData: Project[] = [
     category: "Digital (UI/UX & Tech)",
   },
   {
+    slug: "rrp-electronics",
     img: "assets/images/electronics.avif",
     title: "RRP Electronics",
     bgColor: "bg-black",
@@ -181,6 +189,7 @@ export const projectsData: Project[] = [
     category: "Digital (UI/UX & Tech)",
   },
   {
+    slug: "rrp-defense",
     img: "assets/images/defense.avif",
     title: "RRP Defense Website",
     bgColor: "bg-white",
@@ -199,6 +208,7 @@ export const projectsData: Project[] = [
     category: "Digital (UI/UX & Tech)",
   },
   {
+    slug: "hitech-coders",
     img: "assets/images/stuvio.png",
     video: "assets/videos/Hitech.mov",
     title: "Hitech Coders",
@@ -221,6 +231,7 @@ export const projectsData: Project[] = [
     category: "Agency",
   },
   {
+    slug: "stuvio",
     img: "assets/images/stuvio.png",
     title: "Stuvio",
     bgColor: "bg-white",
@@ -242,6 +253,7 @@ export const projectsData: Project[] = [
     category: "Agency",
   },
   {
+    slug: "rrp-group-av",
     img: "assets/images/electronics.avif",
     video: "assets/videos/Revised Vimananu_Av.mp4",
     title: "RRP Group – Corporate AV & Brand Films",
@@ -264,6 +276,7 @@ export const projectsData: Project[] = [
     category: "Branding and AV/Films",
   },
   {
+    slug: "rrp-electronics-av",
     img: "assets/images/electronics.avif",
     video: "https://vimeo.com/1174022343",
     title: "RRP Electronics – Process AV",
@@ -286,6 +299,7 @@ export const projectsData: Project[] = [
     category: "Branding and AV/Films",
   },
   {
+    slug: "lidcom-branding",
     img: "assets/images/defense.avif",
     video: "https://vimeo.com/1174022037",
     title: "LIDCOM – Branding & Corporate Film",
@@ -308,6 +322,7 @@ export const projectsData: Project[] = [
     category: "Branding and AV/Films",
   },
   {
+    slug: "alviolife-laila",
     img: "assets/images/stuvio.png",
     video: "https://vimeo.com/1174022783",
     title: "Alviolife – Laila Nutra Product Film",

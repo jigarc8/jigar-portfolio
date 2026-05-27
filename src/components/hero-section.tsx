@@ -64,7 +64,7 @@ export default function HeroSection() {
         className="font-heading max-w-3xl leading-[120%] text-4xl font-extrabold md:text-5xl"
       >
         Project Lead <br />
-        <span className="bg-gradient-to-tr from-[#0f8fff] to-[#d384fa] bg-clip-text text-transparent">
+        <span className="bg-gradient-to-tr from-[#0f8fff] to-[#4573AA] bg-clip-text text-transparent">
           Whatever the Work, <br /> I Get It Done.
         </span>{" "}
       </motion.h1>

@@ -230,12 +230,13 @@ export default function JayostuteCapitalCaseStudy({
         >
           <video
             src="/assets/videos/jayovideo.mp4"
-            poster="/assets/images/Jayostute.png"
-            className="h-full w-full object-cover"
+            poster="/assets/images/jayostute-video-poster.png"
+            className="h-full w-full bg-[#ff7100] object-cover"
             autoPlay
             muted
             loop
             playsInline
+            preload="auto"
           />
         </motion.div>
 

@@ -130,7 +130,7 @@ export const projectsData: Project[] = [
   },
   {
     slug: "jayostute-capital",
-    img: "assets/images/Jayostute.png",
+    img: "assets/images/jayostute.png",
     title: "Jayostute Capital",
     bgColor: "bg-white",
     className: "w-[90%] h-auto object-cover object-center",

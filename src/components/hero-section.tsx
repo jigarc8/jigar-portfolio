@@ -16,8 +16,9 @@ export default function HeroSection() {
     <section
       ref={ref}
       id="home"
-      className="relative flex flex-col items-center justify-center gap-5 text-center min-h-[90svh] sm:min-h-screen py-20"
+      className="relative flex min-h-[92svh] flex-col items-center justify-center overflow-hidden py-24 text-center sm:min-h-screen md:py-28"
     >
+      <div className="absolute inset-x-0 top-24 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent" />
       <GridPattern
         width={80}
         height={120}
@@ -33,83 +34,120 @@ export default function HeroSection() {
         strokeDasharray={"4"}
         className={cn(
           "absolute inset-0",
-          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
-          "opacity-80"
+          "[mask-image:radial-gradient(520px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-24%] h-[190%] skew-y-12",
+          "opacity-45"
         )}
       />
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          type: "tween",
-          duration: 0.2,
-          ease: "easeOut",
-        }}
-      >
-        <Link
-          href={siteConfig.links.contactForm}
-          className="flex items-center gap-3 rounded border px-3 py-1"
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "tween",
+            duration: 0.35,
+            ease: "easeOut",
+          }}
         >
-          <span className="relative flex size-2">
-            <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75" />
-            <span className="relative flex size-2 rounded-full bg-green-400"></span>
-          </span>
-          <span className="text-sm">Open to Opportunities</span>
-        </Link>
-      </motion.div>
-      <motion.h1
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="font-heading max-w-3xl leading-[120%] text-4xl font-extrabold md:text-5xl"
-      >
-        Project Lead <br />
-        <span className="bg-gradient-to-tr from-[#0f8fff] to-[#4573AA] bg-clip-text text-transparent">
-          Whatever the Work, <br /> I Get It Done.
-        </span>{" "}
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-          ease: "easeOut",
-        }}
-        className="text-muted-foreground max-w-xl"
-      >
-        Project Lead - Certified Scrum Master <br /> Design, Tech & Business
-      </motion.p>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-          ease: "easeOut",
-        }}
-        className="flex flex-row gap-2 items-center"
-      >
-        <Button asChild size="lg">
-          <Link href={siteConfig.links.contactForm}>
-            Get in touch <Icons.arrowRight className="ml-2 size-4" />
-          </Link>
-        </Button>
-        <Button variant="outline" size="lg" className="flex" asChild>
-          <a href={siteConfig.links.cvPdf} download>
-            Download CV <Icons.download className="ml-2 size-4" />
-          </a>
-        </Button>
-        <Button variant="outline" size="icon" asChild>
           <Link
-            href={siteConfig.links.linkedin}
-            aria-label="Linkedin"
-            target="_blank"
+            href={siteConfig.links.contactForm}
+            className="inline-flex items-center gap-3 rounded-full border border-secondary/20 bg-background/65 px-4 py-2 text-sm font-medium text-foreground/85 shadow-sm backdrop-blur-md transition-colors hover:border-primary/30 hover:text-foreground"
           >
-            <Icons.linkedin className="size-5" />
+            <span className="relative flex size-2.5">
+              <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-70" />
+              <span className="relative flex size-2.5 rounded-full bg-green-400"></span>
+            </span>
+            Open to Technical PM & Digital PM roles
           </Link>
-        </Button>
-      </motion.div>
+        </motion.div>
 
-      <MetricsCounter />
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.08,
+            ease: "easeOut",
+          }}
+          className="mt-8"
+        >
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">
+            Project Lead - Certified Scrum Master
+          </span>
+          <h1 className="font-heading mx-auto max-w-4xl text-balance text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-7xl">
+            Whatever the Work,
+            <span className="block bg-gradient-to-tr from-[#0f8fff] to-[#4573AA] bg-clip-text text-transparent">
+              I Get It Done.
+            </span>
+          </h1>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.14,
+            ease: "easeOut",
+          }}
+          className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
+        >
+          Open to Technical Project Manager, Digital Project Manager, and similar delivery-focused roles where design, tech, business, and stakeholders need clear execution.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.18,
+            ease: "easeOut",
+          }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-3"
+        >
+          <Button asChild size="lg" className="rounded-xl px-7">
+            <Link href={siteConfig.links.contactForm}>
+              Get in touch <Icons.arrowRight className="ml-2 size-4" />
+            </Link>
+          </Button>
+          <Button variant="outline" size="lg" className="flex rounded-xl px-7 bg-background/55 backdrop-blur-sm" asChild>
+            <a href={siteConfig.links.cvPdf} download>
+              Download CV <Icons.download className="ml-2 size-4" />
+            </a>
+          </Button>
+          <Button variant="outline" size="icon" className="rounded-xl bg-background/55 backdrop-blur-sm" asChild>
+            <Link
+              href={siteConfig.links.linkedin}
+              aria-label="Linkedin"
+              target="_blank"
+            >
+              <Icons.linkedin className="size-5" />
+            </Link>
+          </Button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.24,
+            ease: "easeOut",
+          }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground"
+        >
+          <span className="rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1.5">
+            Technical PM
+          </span>
+          <span className="rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1.5">
+            Digital PM
+          </span>
+          <span className="rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1.5">
+            Scrum
+          </span>
+          <span className="rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1.5">
+            Stakeholder Alignment
+          </span>
+        </motion.div>
+
+        <MetricsCounter />
+      </div>
     </section>
   );
 }

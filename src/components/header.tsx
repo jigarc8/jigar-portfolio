@@ -73,7 +73,7 @@ export default function Header() {
       </div>
       {/* Desktop Navbar */}
       <div className="hidden sm:block">
-        <nav className="bg-background/80 items-center gap-2 text-muted-foreground text-sm flex rounded-full border px-2 py-3 backdrop-blur-sm">
+        <nav className="bg-background/80 items-center gap-2 text-muted-foreground text-sm flex rounded-full px-2 py-3 backdrop-blur-sm">
           <ul className="flex gap-5">
             {navLinks.map((data) => {
               const linkHref = isHome ? data.href : `/${data.href}`;
